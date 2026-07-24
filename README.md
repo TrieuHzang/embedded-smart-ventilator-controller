@@ -3,7 +3,6 @@
 [![Platform](https://img.shields.io/badge/Platform-Arduino%20Uno-blue.svg)](https://github.com)
 [![Sensor](https://img.shields.io/badge/Sensor-DS18B20-orange.svg)](https://github.com)
 [![Display](https://img.shields.io/badge/Display-LCD1602%20I2C-green.svg)](https://github.com)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 An embedded smart ventilator system that automatically adjusts fan speed according to ambient temperature using an Arduino Uno and a DS18B20 temperature sensor. The system supports both **Automatic** and **Manual** operating modes, providing efficient cooling through real-time PWM control.
 
