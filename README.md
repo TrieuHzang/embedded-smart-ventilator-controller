@@ -1,20 +1,24 @@
+<p align="center">
+  <img src="https://hits.sh/github.com/TrieuHzang/embedded-smart-ventilator-controller.svg?label=Repo%20Traffic&color=0e75b6" alt="Repo Traffic">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/platform-Arduino%20Uno-brightgreen" alt="Platform">
+  <img src="https://img.shields.io/badge/sensor-DS18B20-brightgreen" alt="Sensor">
+  <img src="https://img.shields.io/badge/control-PWM%2025%20kHz-brightgreen" alt="PWM Control">
+  <img src="https://img.shields.io/badge/display-LCD1602%20I2C-brightgreen" alt="Display">
+  <img src="https://img.shields.io/badge/algorithm-Hysteresis-brightgreen" alt="Algorithm">
+</p>
+
 # Embedded Smart Ventilator Controller
 
-[![Platform](https://img.shields.io/badge/Platform-Arduino%20Uno-blue.svg)](https://github.com)
-[![Sensor](https://img.shields.io/badge/Sensor-DS18B20-orange.svg)](https://github.com)
-[![Display](https://img.shields.io/badge/Display-LCD1602%20I2C-green.svg)](https://github.com)
-
 An embedded smart ventilator system that automatically adjusts fan speed according to ambient temperature using an Arduino Uno and a DS18B20 temperature sensor. The system supports both **Automatic** and **Manual** operating modes, providing efficient cooling through real-time PWM control.
-
----
 
 <p align="center">
   <img src="images/prototype.png" alt="Embedded Smart Ventilator Controller" width="600">
   <br>
   <em>Figure 1: Hardware prototype of the Embedded Smart Ventilator Controller</em>
 </p>
-
----
 
 ## Description
 
@@ -28,7 +32,6 @@ The **Embedded Smart Ventilator Controller** improves cooling efficiency by cont
 
 The project demonstrates embedded firmware development involving sensor acquisition, PWM generation, real-time control algorithms, and human-machine interaction.
 
----
 
 ## Key Features
 
@@ -42,25 +45,7 @@ The project demonstrates embedded firmware development involving sensor acquisit
 - Fan kick-start mechanism
 - Quiet and energy-efficient operation
 
----
-
 ## System Architecture
-
-```text
-        DS18B20 Temperature Sensor
-                  │
-                  ▼
-           Arduino Uno R3
-                  │
-      ┌───────────┼────────────┐
-      ▼           ▼            ▼
- LCD1602      Push Button   PWM Driver
-                                  │
-                                  ▼
-                          4-Wire PWM Fan
-```
-
----
 
 <p align="center">
   <img src="images/sodokhoi.png" alt="System Block Diagram" width="600">
@@ -68,7 +53,6 @@ The project demonstrates embedded firmware development involving sensor acquisit
   <em>Figure 2: System block diagram of the Embedded Smart Ventilator Controller</em>
 </p>
 
----
 
 ## Control Algorithm
 
@@ -77,8 +61,6 @@ The project demonstrates embedded firmware development involving sensor acquisit
   <br>
   <em>Figure 3: Software flowchart of the automatic and manual control algorithm</em>
 </p>
-
----
 
 ## Automatic Mode
 
@@ -90,13 +72,11 @@ The project demonstrates embedded firmware development involving sensor acquisit
 
 In Automatic Mode, the controller continuously reads the ambient temperature from the DS18B20 sensor and automatically selects one of three fan levels according to predefined thresholds:
 
-- **Temperature < 30°C** → Level 1 (30% PWM)
-- **30°C – 40°C** → Level 2 (60% PWM)
-- **Temperature > 40°C** → Level 3 (100% PWM)
+- **Temperature < 30°C** -> Level 1 (30% PWM)
+- **30°C – 40°C** -> Level 2 (60% PWM)
+- **Temperature > 40°C** -> Level 3 (100% PWM)
 
 A hysteresis algorithm prevents frequent fan speed switching when the measured temperature fluctuates near threshold values.
-
----
 
 ## Manual Mode
 
@@ -111,12 +91,10 @@ Manual Mode allows users to directly control the cooling fan without relying on 
 Each button press cycles through the following sequence:
 
 ```
-OFF → Level 1 → Level 2 → Level 3 → OFF
+OFF -> Level 1 -> Level 2 -> Level 3 -> OFF
 ```
 
 The LCD continuously displays the selected operating mode, fan level, current temperature, and PWM duty cycle.
-
----
 
 ## Applications
 
@@ -126,3 +104,18 @@ The LCD continuously displays the selected operating mode, fan level, current te
 - Industrial cooling systems
 - Laboratory equipment cooling
 - Educational embedded system projects
+
+## Contact & Support
+
+**Trieu Ha Giang** - Embedded Systems Engineering Student
+
+```text
+Thank you for visiting this repository.
+If you have any questions or feedback about the embedded system, AI module, or hardware integration, feel free to reach out directly.
+```
+
+**My contact:**
+
+[![Email](https://img.shields.io/badge/Email-trieuhagiang1312%40gmail.com-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:trieuhagiang1312@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-TrieuHzang-181717?style=flat&logo=github&logoColor=white)](https://github.com/TrieuHzang)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-haazangg-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/haazangg/)
